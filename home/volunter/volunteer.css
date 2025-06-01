@@ -1,0 +1,187 @@
+/* Reset & Base */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: 'Lora', serif;
+  color: #0b2141;
+  background: #f7f3ea;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(11, 33, 65, 0.85);
+  padding: 1rem 2rem;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #4db6ac;
+  letter-spacing: 2px;
+  cursor: default;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #cde7e2;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  background: #4db6ac;
+  color: #fff;
+}
+
+/* Volunteer Hero */
+.volunteer-hero {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.volunteer-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 33, 65, 0.7);
+}
+.volunteer-hero-content {
+  position: relative;
+  color: #e8f6f3;
+  max-width: 700px;
+  z-index: 1;
+  animation: fadeInUp 1.8s ease forwards;
+}
+.volunteer-hero-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.volunteer-hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Button */
+.btn {
+  background: #4db6ac;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(77,182,172,0.5);
+}
+.btn:hover {
+  background: #399b8a;
+  box-shadow: 0 6px 14px rgba(57,155,138,0.7);
+}
+
+/* Section Blocks */
+.section-block {
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.section-block h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #0b2141;
+}
+.volunteer-info p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #214a44;
+}
+.volunteer-info ul {
+  list-style: disc;
+  margin: 1rem auto;
+  padding-left: 1.5rem;
+  text-align: left;
+  max-width: 500px;
+}
+.volunteer-info li {
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  color: #214a44;
+}
+
+/* Sign Up Form */
+.signup-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+.signup-section input,
+.signup-section textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Lora', serif;
+}
+.signup-section textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.signup-section button {
+  align-self: center;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .volunteer-hero-content h1 {
+    font-size: 2rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+}

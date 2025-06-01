@@ -1,0 +1,121 @@
+:root {
+  --primary: #2b79ff;
+  --primary-dark: #1a60e2;
+  --gradient: linear-gradient(135deg, #2b79ff, #6ec6ff);
+  --bg-color: #f3f8fd;
+  --text-dark: #1f2b3d;
+  --text-light: #56697d;
+  --success-bg: #d1f0dc;
+  --success-text: #21623b;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.donate-container {
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.donate-container h1 {
+  font-size: 1.9rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.donate-container p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+}
+
+.donate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  display: block;
+  color: var(--text-dark);
+}
+
+.form-group input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(43, 121, 255, 0.15);
+}
+
+.btn-donate {
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: var(--gradient);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-donate:hover {
+  background: linear-gradient(135deg, #1a60e2, #5db4ff);
+}
+
+.success-message {
+  display: none;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--success-bg);
+  color: var(--success-text);
+  font-weight: 600;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .donate-container {
+    padding: 30px 20px;
+  }
+
+  .donate-container h1 {
+    font-size: 1.5rem;
+  }
+}
